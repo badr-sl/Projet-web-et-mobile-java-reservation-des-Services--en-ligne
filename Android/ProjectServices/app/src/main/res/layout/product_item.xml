@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    tools:context=".ProductActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/productCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackground"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="168dp"
+                android:layout_height="147dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintDimensionRatio="H,5:3"
+                app:layout_constraintEnd_toStartOf="@+id/productName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/labelCategory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/productImage"
+                app:layout_constraintWidth_percent="0.6" />
+
+            <TextView
+                android:id="@+id/labelCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category :"
+                app:layout_constraintStart_toStartOf="@id/productName"
+                app:layout_constraintTop_toBottomOf="@id/productName" />
+
+            <TextView
+                android:id="@+id/productCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Category Value"
+                app:layout_constraintEnd_toEndOf="@id/productName"
+                app:layout_constraintStart_toStartOf="@id/labelCategory"
+                app:layout_constraintTop_toBottomOf="@id/labelCategory" />
+
+            <TextView
+                android:id="@+id/labelPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price :"
+                app:layout_constraintStart_toStartOf="@id/productCategory"
+                app:layout_constraintTop_toBottomOf="@id/productCategory" />
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                app:layout_constraintEnd_toEndOf="@id/productCategory"
+                app:layout_constraintStart_toStartOf="@id/labelPrice"
+                app:layout_constraintTop_toBottomOf="@id/labelPrice" />
+
+            <!-- Bouton "Reserve" -->
+
+            <!-- Bouton "Commentaire" -->
+
+            <Button
+                android:id="@+id/btnReserve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_bg"
+                android:text="Reserve"
+                app:layout_constraintEnd_toStartOf="@id/btnComment"
+                app:layout_constraintHorizontal_bias="0.37"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+            <Button
+                android:id="@+id/btnComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/btn_bg"
+                android:text="Commentaire"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.67"
+                app:layout_constraintStart_toEndOf="@id/btnReserve"
+                app:layout_constraintTop_toBottomOf="@id/productPrice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
